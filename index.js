@@ -39,4 +39,4 @@ client.on('ready', () => {                //esto es un evento            //cuand
       });
   
 
-client.login('ODQ0MjUzNDU0OTE4NjE1MDQw.YKPuTQ.e6at6yl6Ii7EI0dIyPZZzRJOCNs')  //Aca pongo el token para llamar al bot
+client.login('aca va el token')  //Aca pongo el token para llamar al bot
