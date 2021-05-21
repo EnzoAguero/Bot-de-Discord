@@ -17,8 +17,8 @@ client.on('ready', () => {                //esto es un evento            //cuand
           msg.reply('Pong!');                                       //responde esto
                                                                   //me responde el mensaje con lo que le pase 
         }
-        if (msg.content.toLowerCase === 'Hola cata'){               //si el contenido del mensaje es Hola cata
-            msg.reply('Hola, como estas?')   //me responde esto a TODO el canal
+        if (msg.content==='Hola cata'){               //si el contenido del mensaje es Hola cata
+            msg.reply('Hola, como estas?')                     //me responde esto a TODO el canal
             
         }
         if (msg.content === 'Cata, como van los grupos?'){
