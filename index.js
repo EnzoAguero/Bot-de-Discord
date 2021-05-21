@@ -56,7 +56,7 @@ client.on('ready', () => {                //esto es un evento            //cuand
             case ("Hola Cata" || "hola cata" || "Hola cata" || "Hola Catalina" || "Hola catalina"):
                  msg.reply('Hola, como estas?')
                 break;
-            case ("Cata, como van los grupo?" || "Como van los grupo?" || "como van los grupos?"):
+            case ("Cata, como van los grupo?" || "Como van los grupo?" || "como van los grupos?":
                 msg.reply('@everyone Hi!! Los grupos ya estan armados con su respectivo canal de voz. :]');
                 break;
             case "Gracias Cata" || "Muchas gracias" || "Gracias":
