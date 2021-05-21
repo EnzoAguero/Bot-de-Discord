@@ -11,7 +11,7 @@ client.on('ready', () => {                //esto es un evento            //cuand
       console.log(message.content);
   
     }); */ 
-    /* client.on('message', msg => { */                                      //recibo un mensaje en discord
+    client.on('message', msg => {                                      //recibo un mensaje en discord
         /*
         if (msg.content === 'ping') {                                // si el mensaje contiene cierta palabra
           msg.reply('Pong!');                                       //responde esto
@@ -37,7 +37,6 @@ client.on('ready', () => {                //esto es un evento            //cuand
         }
         if(msg.content === 'Cata, como van los canales?'){
             msg.reply('@everyone Los canales ya estan armados, tanto canales de voz como de texto para que los grupos trabajen organizada y comodamente. Espero que trabajen duro y nadie abandone en el camino.')
-
         }
         if (msg.content === 'Cata, toda la comision esta en el grupo?'){
         msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
@@ -53,10 +52,10 @@ client.on('ready', () => {                //esto es un evento            //cuand
             case "ping":
                 msg.reply('Pong!'); 
                 break;
-            case "Hola Cata" || "hola cata" || "Hola cata" || "Hola Catalina" || "Hola catalina":        
-                msg.channel.send('@everyone Hello Comision6 :]');
+            case ("Hola Cata" || "hola cata" || "Hola cata" || "Hola Catalina" || "Hola catalina"):
+                 msg.reply('Hola, como estas?')
                 break;
-            case "Cata, como van los grupo?" || "Como van los grupo?" || "como van los grupos?":
+            case ("Cata, como van los grupo?" || "Como van los grupo?" || "como van los grupos?") :
                 msg.reply('@everyone Hi!! Los grupos ya estan armados con su respectivo canal de voz. :]');
                 break;
             case "Gracias Cata" || "Muchas gracias" || "Gracias":
@@ -72,9 +71,8 @@ client.on('ready', () => {                //esto es un evento            //cuand
                 break;
         }
         
-        
-        
+    });   
       
   
 
-client.login('token')  //Aca pongo el token para llamar al bot
+client.login('ODQ0MjUzNDU0OTE4NjE1MDQw.YKPuTQ.FhRrcvJGwp0sDvjaBu-MYBS5vFg')  //Aca pongo el token para llamar al bot
