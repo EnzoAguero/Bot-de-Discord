@@ -2,15 +2,19 @@ const Discord = require('discord.js');  //modulo instalado de discord.js
 const client =  new Discord.Client();  //El client es el bot el cual recibe y envia mensajes devuelta y demas //cuando determino un objeto con el new me devuelve un objeto
 
 
-client.on('ready', () => {                //esto es un evento            //cuando el bot esta listo ingresa el mensaje
-    console.log(`Logged in as ${client.user.tag}!`);  
-  });
+client.on('ready', () => {                       //esto es un evento                    //cuando el bot esta listo ingresa el mensaje
+    console.log(`Logged in as ${client.user.tag}!`); 
+    client.user.setStatus('online')
+    
+    console.log(client.user.presence.status);                                        //me pone el estado online del bot
+
+});
   
-   /* client.on('message', message => {
+    client.on('message', message => {
       //recibiendo el mensaje y lo muestro por consola aca
       console.log(message.content);
   
-    }); */ 
+    }); 
     client.on('message', msg => {                                      //recibo un mensaje en discord
         
         if (msg.content === 'ping') {                                // si el mensaje contiene cierta palabra
@@ -41,14 +45,18 @@ client.on('ready', () => {                //esto es un evento            //cuand
         if (msg.content === 'Cata, toda la comision esta en el grupo?'){
         msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
         }
-      
+        
+        
+
+       
+        
        });
     
     
         
 
 
-        //NOTA: cambiar codigo para usar un switch
+        //NOTA: el switch se bugea
         
        
       
