@@ -11,7 +11,7 @@ client.on('ready', () => {                //esto es un evento            //cuand
       console.log(message.content);
   
     }); */ 
-    client.on('message', msg => {                                      //recibo un mensaje en discord
+    /* client.on('message', msg => { */                                      //recibo un mensaje en discord
         /*
         if (msg.content === 'ping') {                                // si el mensaje contiene cierta palabra
           msg.reply('Pong!');                                       //responde esto
@@ -73,7 +73,8 @@ client.on('ready', () => {                //esto es un evento            //cuand
         }
         
         
+        
       
   
 
-client.login('ODQ0MjUzNDU0OTE4NjE1MDQw.YKPuTQ.FhRrcvJGwp0sDvjaBu-MYBS5vFg')  //Aca pongo el token para llamar al bot
+client.login('token')  //Aca pongo el token para llamar al bot
