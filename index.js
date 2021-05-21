@@ -12,6 +12,7 @@ client.on('ready', () => {                //esto es un evento            //cuand
   
     }); */ 
     client.on('message', msg => {                                      //recibo un mensaje en discord
+        /*
         if (msg.content === 'ping') {                                // si el mensaje contiene cierta palabra
           msg.reply('Pong!');                                       //responde esto
                                                                   //me responde el mensaje con lo que le pase 
@@ -29,11 +30,30 @@ client.on('ready', () => {                //esto es un evento            //cuand
         
          if(msg.content === 'Q sale gente'){
             msg.reply('@everyone Lolsito, Cs, Valorant o dbd?')
-        }
+        }*/
 
         //NOTA: cambiar codigo para usar un switch
         
-        
+        switch (msg.content) {
+            case "ping":
+                msg.reply('Pong!'); 
+                break;
+            case "Hola Cata" || "hola cata" || "Hola cata" || "Hola Catalina" || "Hola catalina":        
+                msg.channel.send('@everyone Hello Comision6 :]');
+                break;
+            case "Cata, como van los grupo?" || "Como van los grupo?" || "como van los grupos?":
+                msg.reply('@everyone Hi!! Los grupos ya estan armados con su respectivo canal de voz. :]');
+                break;
+            case "Gracias Cata" || "Muchas gracias" || "Gracias":
+                msg.reply('No hay ningun problema, estoy hecha para ayudar a las personas')
+                break
+            case "Que sale gente?":
+                msg.reply('@everyone Lolsito, Cs, Valorant o dbd?')
+                break
+            default:
+                msg.reply('Aun no tengo una funcion para lo que me estas indicando')
+                break;
+        }
         
         
       });
