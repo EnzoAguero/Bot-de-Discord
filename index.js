@@ -18,7 +18,7 @@ client.on('ready', () => {                //esto es un evento            //cuand
                                                                   //me responde el mensaje con lo que le pase 
         }
         if (msg.content === 'Hola cata'){               //si el contenido del mensaje es Hola cata
-            msg.channel.send('@everyone Hello Comision6 :]')   //me responde esto a TODO el canal
+            msg.reply('Hola, como estas?')   //me responde esto a TODO el canal
             
         }
         if (msg.content === 'Cata, como van los grupos?'){
@@ -30,7 +30,22 @@ client.on('ready', () => {                //esto es un evento            //cuand
         
          if(msg.content === 'Q sale gente'){
             msg.reply('@everyone Lolsito, Cs, Valorant o dbd?')
-        }*/
+        }
+        }
+        if(msg.content === 'chau cata'){
+            msg.reply('Adios, me voy a mimir :]')
+        }
+        if(msg.content === 'Cata, como van los canales?'){
+            msg.reply('@everyone Los canales ya estan armados, tanto canales de voz como de texto para que los grupos trabajen organizada y comodamente. Espero que trabajen duro y nadie abandone en el camino.')
+
+        }
+        if (msg.content === 'Cata, toda la comision esta en el grupo?'){
+        msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
+    }
+      
+       });
+        */
+
 
         //NOTA: cambiar codigo para usar un switch
         
@@ -50,13 +65,15 @@ client.on('ready', () => {                //esto es un evento            //cuand
             case "Que sale gente?":
                 msg.reply('@everyone Lolsito, Cs, Valorant o dbd?')
                 break
+            case "Chau cata":
+                msg.reply('Adios, me voy a mimir :]')
             default:
                 msg.reply('Aun no tengo una funcion para lo que me estas indicando')
                 break;
         }
         
         
-      });
+      
   
 
-client.login('aca va el token')  //Aca pongo el token para llamar al bot
+client.login('ODQ0MjUzNDU0OTE4NjE1MDQw.YKPuTQ.FhRrcvJGwp0sDvjaBu-MYBS5vFg')  //Aca pongo el token para llamar al bot
