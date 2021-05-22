@@ -1,7 +1,7 @@
 const Discord = require('discord.js');  //modulo instalado de discord.js
 const client = new Discord.Client();  //El client es el bot el cual recibe y envia mensajes devuelta y demas //cuando determino un objeto con el new me devuelve un objeto
 const chiste = require("./chistes.js")
-
+const config = require('./config.json')
 let chistes = ["¿Qué le dice la foca a su madre? I love you, mother foca.", "Doctor, tengo todo el cuerpo cubierto de pelo. ¿Qué padezco? Padece uzté un ozito."] 
 
 
@@ -20,12 +20,12 @@ client.on('message', msg => {                                      //recibo un m
     //convierte el string en minusculas
     let mensaje = msg.content.toLowerCase()
     console.log(mensaje)
-    if (mensaje === 'ping') {                                // si el mensaje contiene cierta palabra
-        msg.reply('Pong!');                                       //responde esto
+    if (mensaje.startsWith(config.prefix +'ping')) {                                // si el mensaje contiene el prefix que es ! mas ping
+        msg.reply('Pong!');                                                           //responde esto
         //me responde el mensaje con lo que le pase 
     }
-    if (mensaje === 'hola cata') {               //si el contenido del mensaje es Hola cata
-        msg.reply('Hola, como estas?')                     //me responde esto a TODO el canal
+    if (mensaje === 'hola cata') {                                   //si el contenido del mensaje es Hola cata
+        msg.reply('Hola, como estas?')                                   //me responde esto a TODO el canal
 
     }
     if(mensaje == "muy bien y vos" || mensaje === "muy bien, vos?" || mensaje === "bien, vos?"){
@@ -52,16 +52,20 @@ client.on('message', msg => {                                      //recibo un m
         msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
     }
 
-    if (mensaje === "cata, contame un chiste" || mensaje === "me contas un chiste?"){
+    if (mensaje.startsWith(config.prefix + 'chistes')){
         msg.reply(chiste[Math.floor(Math.random() * chiste.length)])
     }
     if (mensaje === "cata, por que ella no me ama?"){
         msg.reply("porque te esta gorreando con otro")
     }
+    
+    
+ 
+    
 
 });
 
-//Enzo, el siguiente codigo envía un mensaje a un nuevo miembro al grupo
+//Robert, agregue un prefix que es el simbolo del comando, en este caso es el "!", y eso lo determino en el json
 
 
 client.on('guildMemberAdd', member => {
