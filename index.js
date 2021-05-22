@@ -52,7 +52,7 @@ client.on('message', msg => {                                      //recibo un m
         msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
     }
 
-    if (mensaje === "cata, contame un chiste" || mensaje === "me contas un chiste?"){
+    if (mensaje === "cata, contame un chiste" || mensaje === "me contas un chiste?" || mensaje === "me contas otro chiste?" || mensaje === "contame otro chiste"){
         msg.reply(chiste[Math.floor(Math.random() * chiste.length)])
     }
     if (mensaje === "cata, por que ella no me ama?"){
