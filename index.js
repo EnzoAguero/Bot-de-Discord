@@ -5,9 +5,14 @@ const config = require('./config.json')
 let chistes = ["¿Qué le dice la foca a su madre? I love you, mother foca.", "Doctor, tengo todo el cuerpo cubierto de pelo. ¿Qué padezco? Padece uzté un ozito."] 
 
 
+
+
+
 client.on('ready', () => {                //esto es un evento            //cuando el bot esta listo ingresa el mensaje
     console.log(`Logeada como ${client.user.tag}! en Discord`);
 });
+
+
 
 /* client.on('message', message => {
    //recibiendo el mensaje y lo muestro por consola aca
@@ -23,7 +28,7 @@ client.on('message', msg => {                                      //recibo un m
     if (mensaje.startsWith(config.prefix +'ping')) {                                // si el mensaje contiene el prefix que es ! mas ping
         msg.reply('Pong!');                                                           //responde esto
         //me responde el mensaje con lo que le pase 
-    }
+    }else
     if (mensaje === 'hola cata') {                                   //si el contenido del mensaje es Hola cata
         msg.reply('Hola, como estas?')                                   //me responde esto a TODO el canal
 
@@ -58,6 +63,22 @@ client.on('message', msg => {                                      //recibo un m
     if (mensaje === "cata, por que ella no me ama?"){
         msg.reply("porque te esta gorreando con otro")
     }
+        
+    if (msg.content.startsWith(config.prefix + 'Moderadores')){
+        msg.channel.send({embed: {
+          color: 3447003,
+          description: "Enzo Aguero y Daniel Fernandez"
+        }});
+
+    }
+    if (msg.content.startsWith(config.prefix + 'Fecha')){
+        msg.channel.send({embed: {
+          color: 3447003,
+          description: "Fecha de entrega del primer Sprint: "
+        }});
+    }
+
+  
 
     
  
@@ -67,15 +88,15 @@ client.on('message', msg => {                                      //recibo un m
 
 //Robert, agregue un prefix que es el simbolo del comando, en este caso es el "!", y eso lo determino en el json
 
-
 client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Envía un mensaje al nuevo miembro en el grupo
-  channel.send(`Bienvenidos al servidor de las Berenjenas frustradas, ${member}. Espero que lo disfrutes y respetes las reglas`);
-});
+    // Send the message to a designated channel on a server:
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+    // Do nothing if the channel wasn't found on this server
+    if (!channel) return;
+    // Envía un mensaje al nuevo miembro en el grupo
+    channel.send(`Bienvenidos al servidor de las Berenjenas frustradas, ${member}. Espero que lo disfrutes y respetes las reglas`);
+  });
+
 
 
 
