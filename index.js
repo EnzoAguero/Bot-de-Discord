@@ -58,7 +58,7 @@ client.on('message', msg => {                                      //recibo un m
     if (mensaje === "cata, por que ella no me ama?"){
         msg.reply("porque te esta gorreando con otro")
     }
-    
+
     
  
     
