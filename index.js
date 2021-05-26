@@ -2,10 +2,6 @@ const Discord = require('discord.js');  //modulo instalado de discord.js
 const client = new Discord.Client();  //El client es el bot el cual recibe y envia mensajes devuelta y demas //cuando determino un objeto con el new me devuelve un objeto
 const chiste = require("./chistes.js")
 const config = require('./config.json')
-let chistes = ["¿Qué le dice la foca a su madre? I love you, mother foca.", "Doctor, tengo todo el cuerpo cubierto de pelo. ¿Qué padezco? Padece uzté un ozito."] 
-
-
-
 
 
 client.on('ready', () => {                //esto es un evento            //cuando el bot esta listo ingresa el mensaje
@@ -43,11 +39,11 @@ client.on('message', msg => {                                      //recibo un m
         msg.reply('No hay ningun problema, estoy hecha para ayudar a las personas')
     }
 
-    if (mensaje === 'que sale gente') {
+    if (mensaje === 'que sale gente?') {
         msg.reply('@everyone Lolsito, Cs, Valorant o dbd?')
     }
 
-    if (mensaje === 'chau cata') {
+    if (mensaje === 'chau cata' || mensaje === "adios cata" || mensaje === "besos cata" || mensaje === "me voy cata") {
         msg.reply('Adios, me voy a mimir :]')
     }
     if (mensaje === 'cata, como van los canales?') {
@@ -57,7 +53,7 @@ client.on('message', msg => {                                      //recibo un m
         msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
     }
 
-    if (mensaje.startsWith(config.prefix + 'chistes')){
+    if (mensaje.startsWith(config.prefix + 'chistes') || mensaje === "cata, contame un chiste" || mensaje === "cata, me contas un chiste?"){
         msg.reply(chiste[Math.floor(Math.random() * chiste.length)])
     }
     if (mensaje === "cata, por que ella no me ama?"){
@@ -74,15 +70,9 @@ client.on('message', msg => {                                      //recibo un m
     if (msg.content.startsWith(config.prefix + 'Fecha')){
         msg.channel.send({embed: {
           color: 3447003,
-          description: "Fecha de entrega del primer Sprint: "
+          description: "Fecha de entrega del primer Sprint: 2 de junio 2021"
         }});
     }
-
-  
-
-    
- 
-    
 
 });
 
