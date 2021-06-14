@@ -74,9 +74,12 @@ client.on('message', msg => {                                      //recibo un m
     if (msg.content.startsWith(config.prefix + 'Fecha')){
         msg.channel.send({embed: {
           color: 3447003,
-          description: "Fecha de entrega del primer Sprint: "
+          description: "Fecha de entrega del primer Sprint: "   //no me acuerdo la fecha xD
         }});
     }
+    if (mensaje === "catita, porque estas inactiva?"){
+        msg.reply("Mi creador anda ocupado con las cosas del sprint 1 porque quiere tener la mejor idea. Pero apenas termine voy a recibir una actualizacion :]")}
+    
 
   
 
