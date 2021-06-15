@@ -3,7 +3,7 @@ const client = new Discord.Client();  //El client es el bot el cual recibe y env
 const chiste = require("./chistes.js")
 const config = require('./config.json')
 let chistes = ["¿Qué le dice la foca a su madre? I love you, mother foca.", "Doctor, tengo todo el cuerpo cubierto de pelo. ¿Qué padezco? Padece uzté un ozito."] 
-
+const user = require('./user.js');
 
 
 
@@ -79,6 +79,12 @@ client.on('message', msg => {                                      //recibo un m
     }
     if (mensaje === "catita, porque estas inactiva?"){
         msg.reply("Mi creador anda ocupado con las cosas del sprint 1 porque quiere tener la mejor idea. Pero apenas termine voy a recibir una actualizacion :]")}
+
+        
+           
+           
+           
+        
     
 
   
