@@ -1,8 +1,9 @@
-module.exports = [
+module.exports = userdb = [
     {
         nombre: "Solange Yanett",
         apellido: "Abreu",
-        nacimiento: "15/11",
+        dia_nacimiento: 15,
+        mes_nacimiento: 11,
         telefono: 1144459332,
         sexo: "F"
     },

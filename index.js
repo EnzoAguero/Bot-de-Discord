@@ -2,15 +2,53 @@ const Discord = require('discord.js');  //modulo instalado de discord.js
 const client = new Discord.Client();  //El client es el bot el cual recibe y envia mensajes devuelta y demas //cuando determino un objeto con el new me devuelve un objeto
 const chiste = require("./chistes.js")
 const config = require('./config.json')
-let chistes = ["¿Qué le dice la foca a su madre? I love you, mother foca.", "Doctor, tengo todo el cuerpo cubierto de pelo. ¿Qué padezco? Padece uzté un ozito."] 
 const user = require('./user.js');
+let fecha = new Date();
+let fechaDia = fecha.getDate();
+let fechaMes = fecha.getMonth()+1;
+let horario = fecha.getHours()
+/* let data = {mensaje:'Feliz cumpleaños'} 
+let mensaje = new Discord.Message(client,data,'TextChannel'); */
+
 
 
 
 
 client.on('ready', () => {                //esto es un evento            //cuando el bot esta listo ingresa el mensaje
+    
     console.log(`Logeada como ${client.user.tag}! en Discord`);
+    birthdays()
+    
 });
+
+function birthdays(){
+    user.forEach(usuario =>  {
+        if (fechaDia === usuario.dia_nacimiento && fechaMes === usuario.mes_nacimiento ) {
+             if (fecha.getHours() == '21') {
+                 console.log('Feliz cumple');
+
+                 
+
+
+
+                 
+                    
+                    /* client.msg.channel(836028558321123333).send({embed: {
+                      color: 3447003,
+                      description: 'Feliz cumpleaños :partying_face: '
+                    }});  */
+                
+            } 
+        }
+
+    }
+    )
+    
+
+
+}
+
+
 
 
 
@@ -47,9 +85,9 @@ client.on('message', msg => {                                      //recibo un m
         msg.reply('@everyone Lolsito, Cs, Valorant o dbd?')
     }
 
-    if (mensaje === 'chau cata') {
-        msg.reply('Adios, me voy a mimir :]')
-    }
+    mensaje === 'chau cata' ? msg.reply ('Adios, me voy a mimir') : null
+        
+    
     if (mensaje === 'cata, como van los canales?') {
         msg.reply('@everyone Los canales ya estan armados, tanto canales de voz como de texto para que los grupos trabajen organizada y comodamente. Espero que trabajen duro y nadie abandone en el camino.')
     }
@@ -74,25 +112,13 @@ client.on('message', msg => {                                      //recibo un m
     if (msg.content.startsWith(config.prefix + 'Fecha')){
         msg.channel.send({embed: {
           color: 3447003,
-          description: "Fecha de entrega del primer Sprint: "   //no me acuerdo la fecha xD
+          description: "Fecha de entrega del primer Sprint: 2 de junio 2021" 
         }});
     }
     if (mensaje === "catita, porque estas inactiva?"){
         msg.reply("Mi creador anda ocupado con las cosas del sprint 1 porque quiere tener la mejor idea. Pero apenas termine voy a recibir una actualizacion :]")}
 
         
-           
-           
-           
-        
-    
-
-  
-
-    
- 
-    
-
 });
 
 //Robert, agregue un prefix que es el simbolo del comando, en este caso es el "!", y eso lo determino en el json
