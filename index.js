@@ -7,6 +7,9 @@ let fecha = new Date();
 let fechaDia = fecha.getDate();
 let fechaMes = fecha.getMonth()+1;
 let horario = fecha.getHours()
+/* const canal = client.channels.get('836028558321123333'); */
+
+
 /* let data = {mensaje:'Feliz cumpleaños'} 
 let mensaje = new Discord.Message(client,data,'TextChannel'); */
 
@@ -24,20 +27,14 @@ client.on('ready', () => {                //esto es un evento            //cuand
 function birthdays(){
     user.forEach(usuario =>  {
         if (fechaDia === usuario.dia_nacimiento && fechaMes === usuario.mes_nacimiento ) {
-             if (fecha.getHours() == '21') {
-                 console.log('Feliz cumple');
+             if (fecha.getHours() == '01') {
+                 console.log('Feliz cumple '); 
+                 client.channels.fetch('836028558321123333')
+                 .then(channel => {
+                     channel.send("Feliz cumple!!!"); })
 
                  
-
-
-
                  
-                    
-                    /* client.msg.channel(836028558321123333).send({embed: {
-                      color: 3447003,
-                      description: 'Feliz cumpleaños :partying_face: '
-                    }});  */
-                
             } 
         }
 
@@ -117,6 +114,15 @@ client.on('message', msg => {                                      //recibo un m
     }
     if (mensaje === "catita, porque estas inactiva?"){
         msg.reply("Mi creador anda ocupado con las cosas del sprint 1 porque quiere tener la mejor idea. Pero apenas termine voy a recibir una actualizacion :]")}
+
+
+       /*  const Mensaje={
+            'hola' : msg.reply('hola, que haces'),
+            'que tal' : 'todo bien'
+        }
+
+        console.log(Mensaje['que tal']); */
+
 
         
 });
