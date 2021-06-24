@@ -2,8 +2,8 @@ module.exports = userdb = [
     {
         nombre: "Solange Yanett",
         apellido: "Abreu",
-        dia_nacimiento: 22, /* 15 */
-        mes_nacimiento: 6, /* 11 */
+        dia_nacimiento: 15, /* 15 */
+        mes_nacimiento: 11, /* 11 */
         telefono: 1144459332,
         sexo: "F"
     },
