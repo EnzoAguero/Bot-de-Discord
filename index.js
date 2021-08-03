@@ -27,16 +27,13 @@ client.on('ready', () => {                //esto es un evento            //cuand
 function birthdays() {
     user.forEach(usuario => {
         if (fechaDia === usuario.dia_nacimiento && fechaMes === usuario.mes_nacimiento) {
-            if (fecha.getHours() == '14') {
+            if (fecha.getHours() == '13') {
                 console.log('Feliz cumple ');
-                client.channels.fetch('836028558321123333')
+                client.channels.fetch('844252685388480594') /* '836028558321123333' */
                     .then(channel => {
-                        channel.send('Feliz cumple !!!');
+                        channel.send(`Feliz cumple ${usuario.nombre} ${usuario.apellido}`);
                     })
-
-
-
-            }
+    }
         }
 
     }
@@ -86,19 +83,11 @@ client.on('message', msg => {                                      //recibo un m
     mensaje === 'chau cata' ? msg.reply('Adios, me voy a mimir') : null
 
 
-    if (mensaje === 'cata, como van los canales?') {
-        msg.reply('@everyone Los canales ya estan armados, tanto canales de voz como de texto para que los grupos trabajen organizada y comodamente. Espero que trabajen duro y nadie abandone en el camino.')
-    }
-    if (mensaje === 'cata, toda la comision esta en el grupo?') {
-        msg.reply('No lo se Enzo, pero estaria necesitando que todas las personas ingresen al discord ya que estamos trabajando para facilitar la organizacion del mismo para que cada grupo tenga su espacio.')
-    }
-
     if (mensaje.startsWith(config.prefix + 'chistes')) {
         msg.reply(chiste[Math.floor(Math.random() * chiste.length)])
     }
-    if (mensaje === "cata, por que ella no me ama?") {
-        msg.reply("porque te esta gorreando con otro")
-    }
+
+    
 
     if (msg.content.startsWith(config.prefix + 'Moderadores')) {
         msg.channel.send({
@@ -126,7 +115,7 @@ client.on('message', msg => {                                      //recibo un m
 
 });
 
-//Robert, agregue un prefix que es el simbolo del comando, en este caso es el "!", y eso lo determino en el json
+
 
 client.on("guildMemberAdd", (member) => {
     let canal = client.channels.cache.get('629721506842411049');
