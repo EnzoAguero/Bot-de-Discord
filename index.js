@@ -29,9 +29,9 @@ function birthdays() {
         if (fechaDia === usuario.dia_nacimiento && fechaMes === usuario.mes_nacimiento) {
             if (fecha.getHours() == '13') {
                 console.log('Feliz cumple ');
-                client.channels.fetch('844252685388480594') /* '836028558321123333' */
+                client.channels.fetch('836028558321123333') /* '836028558321123333' */
                     .then(channel => {
-                        channel.send(`Feliz cumple ${usuario.nombre} ${usuario.apellido}`);
+                        channel.send(`Feliz cumple ${usuario.nombre} ${usuario.apellido}:partying_face: :partying_face:  `);
                     })
     }
         }
@@ -140,4 +140,4 @@ client.on("guildMemberAdd", (member) => {
 
 
 
-client.login('ODQ0MjUzNDU0OTE4NjE1MDQw.YKPuTQ.FhRrcvJGwp0sDvjaBu-MYBS5vFg')  //Aca pongo el token para llamar al bot
+client.login('')  //Aca pongo el token para llamar al bot
