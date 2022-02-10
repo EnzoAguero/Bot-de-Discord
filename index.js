@@ -334,4 +334,4 @@ client.on("guildMemberAdd", (member) => {
 
 
 
-client.login('ODQ0MjUzNDU0OTE4NjE1MDQw.YKPuTQ.JB4gcMYs59vGLIjup2YyiIcc0B4')  //Aca pongo el token para llamar al bot
+client.login('')  //Aca pongo el token para llamar al bot
